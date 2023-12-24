@@ -12,7 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 import com.database.DbConnect;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -38,7 +38,7 @@ import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
-import net.connectcode.Code128Auto;
+//import net.connectcode.Code128Auto;
 
 /**
  *
@@ -98,6 +98,7 @@ public class card extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Student ID Card Creator Window");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 153));
@@ -230,9 +231,9 @@ f.setVisible(true);// TODO add your handling code here:
     
     public void propic(){
         String id = table.getValueAt(0, 0).toString();
-        Code128Auto code128=new Code128Auto();
-        String barcode = code128.encode(id);
-        barlab.setText(barcode);
+       // Code128Auto code128=new Code128Auto();
+      //  String barcode = code128.encode(id);
+       // barlab.setText(barcode);
         barlab.setFont(new java.awt.Font("CCode128_S3_Trial",java.awt.Font.PLAIN,24));
   
         Image getAbsolutePath = null;

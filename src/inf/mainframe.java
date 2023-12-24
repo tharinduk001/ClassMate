@@ -35,46 +35,44 @@ public final class mainframe extends javax.swing.JFrame {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-    
+
     public mainframe() {
-        
+
         initComponents();
         conn = DbConnect.connect();
         tableload();
         displayTime();
         propic();
         count();
-        
+
     }
-    
-    public void propic(){
+
+    public void propic() {
         photoad.setText("propic.png");
         ImageIcon icon = new ImageIcon("propic.png");
-        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(),Image.SCALE_SMOOTH);
+        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         photo.setIcon(scaledIcon);
     }
-    
-    public void displayTime(){
+
+    public void displayTime() {
         new Timer(0, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
-               java.text.SimpleDateFormat simpleDateFormat = new java.text.SimpleDateFormat("HH:mm:ss");
-               
-               String text_displayTime = simpleDateFormat.format(new Date());
-               
-               String text_displayDate = new SimpleDateFormat("dd/MM/yyyy",Locale.ENGLISH).format(new Date());
-               
-               t.setText(text_displayTime);
-               d.setText(text_displayDate);
-               
+
+                java.text.SimpleDateFormat simpleDateFormat = new java.text.SimpleDateFormat("HH:mm:ss");
+
+                String text_displayTime = simpleDateFormat.format(new Date());
+
+                String text_displayDate = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).format(new Date());
+
+                t.setText(text_displayTime);
+                d.setText(text_displayDate);
+
             }
         }).start();
     }
-    
-   
-   
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -111,65 +109,70 @@ public final class mainframe extends javax.swing.JFrame {
         idcard = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         atd = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
-        srch = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         d = new javax.swing.JLabel();
         t = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         srchcombo = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        srch = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
 
         jToolBar1.setRollover(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Main Window");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 51));
+        jPanel1.setBackground(new java.awt.Color(22, 33, 44));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel3.setBackground(new java.awt.Color(22, 33, 41));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("Register A Student");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel1.setText("Register A Student ...");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 40));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Grade");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Age");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("TelNo");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 60, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Address");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
 
-        telbox.setBackground(new java.awt.Color(153, 255, 153));
+        telbox.setBackground(new java.awt.Color(107, 106, 88));
         telbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        telbox.setForeground(new java.awt.Color(255, 255, 255));
         telbox.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 telboxKeyPressed(evt);
@@ -180,13 +183,15 @@ public final class mainframe extends javax.swing.JFrame {
         });
         jPanel3.add(telbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 170, 30));
 
-        gradebox.setBackground(new java.awt.Color(0, 255, 102));
-        gradebox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        gradebox.setBackground(new java.awt.Color(107, 106, 88));
+        gradebox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        gradebox.setForeground(new java.awt.Color(255, 255, 255));
         gradebox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" }));
         jPanel3.add(gradebox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 170, 30));
 
-        agebox.setBackground(new java.awt.Color(153, 255, 153));
+        agebox.setBackground(new java.awt.Color(107, 106, 88));
         agebox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        agebox.setForeground(new java.awt.Color(255, 255, 255));
         agebox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ageboxActionPerformed(evt);
@@ -202,27 +207,33 @@ public final class mainframe extends javax.swing.JFrame {
         });
         jPanel3.add(agebox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 170, 30));
 
-        namebox.setBackground(new java.awt.Color(153, 255, 153));
+        namebox.setBackground(new java.awt.Color(107, 106, 88));
         namebox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        namebox.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(namebox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 170, 30));
 
-        adbox.setBackground(new java.awt.Color(153, 255, 153));
+        adbox.setBackground(new java.awt.Color(107, 106, 88));
         adbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        adbox.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(adbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 170, 30));
 
-        insertbtn.setBackground(new java.awt.Color(255, 204, 0));
+        insertbtn.setBackground(new java.awt.Color(14, 187, 15));
         insertbtn.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        insertbtn.setForeground(new java.awt.Color(255, 255, 255));
         insertbtn.setText("Insert");
         insertbtn.setToolTipText("Insert data to database");
+        insertbtn.setFocusPainted(false);
+        insertbtn.setPreferredSize(new java.awt.Dimension(89, 28));
         insertbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 insertbtnActionPerformed(evt);
             }
         });
-        jPanel3.add(insertbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, -1, -1));
+        jPanel3.add(insertbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 30, -1, 30));
 
-        updatebtn.setBackground(new java.awt.Color(255, 204, 0));
+        updatebtn.setBackground(new java.awt.Color(14, 187, 15));
         updatebtn.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        updatebtn.setForeground(new java.awt.Color(255, 255, 255));
         updatebtn.setText("Update");
         updatebtn.setToolTipText("Update a Data");
         updatebtn.addActionListener(new java.awt.event.ActionListener() {
@@ -230,40 +241,51 @@ public final class mainframe extends javax.swing.JFrame {
                 updatebtnActionPerformed(evt);
             }
         });
-        jPanel3.add(updatebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 50, -1, -1));
+        jPanel3.add(updatebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 70, -1, 30));
 
-        delbtn.setBackground(new java.awt.Color(255, 204, 0));
+        delbtn.setBackground(new java.awt.Color(14, 187, 15));
         delbtn.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        delbtn.setForeground(new java.awt.Color(255, 255, 255));
         delbtn.setText("Delete");
         delbtn.setToolTipText("Delete a record");
+        delbtn.setPreferredSize(new java.awt.Dimension(89, 28));
         delbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 delbtnActionPerformed(evt);
             }
         });
-        jPanel3.add(delbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 130, -1, -1));
+        jPanel3.add(delbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 148, -1, 30));
 
-        clrbtn.setBackground(new java.awt.Color(255, 204, 0));
+        clrbtn.setBackground(new java.awt.Color(14, 187, 15));
         clrbtn.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        clrbtn.setForeground(new java.awt.Color(255, 255, 255));
         clrbtn.setText("Clear");
         clrbtn.setToolTipText("Clear the all boxes");
+        clrbtn.setPreferredSize(new java.awt.Dimension(89, 28));
         clrbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clrbtnActionPerformed(evt);
             }
         });
-        jPanel3.add(clrbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 90, 80, -1));
+        jPanel3.add(clrbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 110, 90, 30));
 
-        idbox.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
+        idbox.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        idbox.setForeground(new java.awt.Color(255, 255, 255));
         idbox.setText("0000");
         jPanel3.add(idbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 140, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("ID :");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, -1, -1));
+
+        photoad.setBackground(new java.awt.Color(107, 106, 88));
+        photoad.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(photoad, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 140, 140, -1));
 
-        atch.setBackground(new java.awt.Color(0, 204, 0));
+        atch.setBackground(new java.awt.Color(14, 187, 15));
+        atch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        atch.setForeground(new java.awt.Color(255, 255, 255));
         atch.setText("Attach");
         atch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,30 +293,35 @@ public final class mainframe extends javax.swing.JFrame {
             }
         });
         jPanel3.add(atch, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 170, -1, -1));
+
+        photo.setBackground(new java.awt.Color(4, 5, 6));
         jPanel3.add(photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 4, 140, 130));
 
-        idcard.setBackground(new java.awt.Color(255, 255, 0));
-        idcard.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        idcard.setBackground(new java.awt.Color(255, 64, 64));
+        idcard.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        idcard.setForeground(new java.awt.Color(255, 255, 255));
         idcard.setText("Create ID Card");
         idcard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idcardActionPerformed(evt);
             }
         });
-        jPanel3.add(idcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, 190, 30));
+        jPanel3.add(idcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 30, 190, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 0));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 64, 64));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Mark Fees");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 70, 190, 30));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 90, 190, 30));
 
-        atd.setBackground(new java.awt.Color(255, 255, 0));
-        atd.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        atd.setBackground(new java.awt.Color(255, 64, 64));
+        atd.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        atd.setForeground(new java.awt.Color(255, 255, 255));
         atd.setText("Mark Attendance");
         atd.setMaximumSize(new java.awt.Dimension(173, 29));
         atd.addActionListener(new java.awt.event.ActionListener() {
@@ -302,18 +329,17 @@ public final class mainframe extends javax.swing.JFrame {
                 atdActionPerformed(evt);
             }
         });
-        jPanel3.add(atd, new org.netbeans.lib.awtextra.AbsoluteConstraints(1049, 130, 190, 30));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inf/mainwallpaper.jpg"))); // NOI18N
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 320));
+        jPanel3.add(atd, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 150, 190, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 200));
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel4.setBackground(new java.awt.Color(34, 52, 64));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        table.setBackground(new java.awt.Color(255, 102, 102));
+        table.setAutoCreateRowSorter(true);
+        table.setBackground(new java.awt.Color(70, 70, 68));
+        table.setForeground(new java.awt.Color(255, 255, 255));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -339,10 +365,70 @@ public final class mainframe extends javax.swing.JFrame {
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1240, 350));
 
-        srch.setBackground(new java.awt.Color(255, 153, 153));
-        srch.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Seacrh By :");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, 20));
+
+        d.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        d.setForeground(new java.awt.Color(255, 255, 255));
+        d.setText("jLabel10");
+        jPanel4.add(d, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, 40));
+
+        t.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        t.setForeground(new java.awt.Color(255, 255, 255));
+        t.setText("jLabel10");
+        jPanel4.add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, 40));
+
+        jButton5.setBackground(new java.awt.Color(255, 64, 64));
+        jButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Exit");
+        jButton5.setToolTipText("Close the software");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 380, 70, -1));
+
+        srchcombo.setBackground(new java.awt.Color(107, 106, 88));
+        srchcombo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        srchcombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "*", "id", "name", "grade", "age", "telno" }));
+        srchcombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                srchcomboActionPerformed(evt);
+            }
+        });
+        jPanel4.add(srchcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, 30));
+
+        jButton6.setBackground(new java.awt.Color(14, 187, 15));
+        jButton6.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Help");
+        jButton6.setToolTipText("How to use the software");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 380, 70, -1));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Count :");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 380, -1, 30));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("####");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 90, 30));
+
+        srch.setBackground(new java.awt.Color(107, 106, 88));
+        srch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        srch.setForeground(new java.awt.Color(255, 255, 255));
         srch.setToolTipText("Search students by any keyword");
-        srch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        srch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         srch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 srchActionPerformed(evt);
@@ -353,44 +439,10 @@ public final class mainframe extends javax.swing.JFrame {
                 srchKeyReleased(evt);
             }
         });
-        jPanel4.add(srch, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 230, 40));
+        jPanel4.add(srch, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 230, 30));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 3, 24)); // NOI18N
-        jLabel8.setText("Seacrh By :");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, 40));
-
-        d.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
-        d.setText("jLabel10");
-        jPanel4.add(d, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 370, -1, 40));
-
-        t.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
-        t.setText("jLabel10");
-        jPanel4.add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 370, -1, 40));
-
-        jButton5.setBackground(new java.awt.Color(255, 0, 0));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Exit");
-        jButton5.setToolTipText("Close the software");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 390, 70, 30));
-
-        srchcombo.setBackground(new java.awt.Color(255, 51, 51));
-        srchcombo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        srchcombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "*", "id", "name", "grade", "age", "telno" }));
-        srchcombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                srchcomboActionPerformed(evt);
-            }
-        });
-        jPanel4.add(srchcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, -1, 30));
-
-        jButton2.setBackground(new java.awt.Color(255, 51, 0));
-        jButton2.setFont(new java.awt.Font("Swis721 Hv BT", 1, 18)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 120, 137));
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Print Details");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -398,27 +450,7 @@ public final class mainframe extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 370, 180, 40));
-
-        jButton6.setBackground(new java.awt.Color(0, 204, 51));
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Help");
-        jButton6.setToolTipText("How to use the software");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 360, -1, 30));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel12.setText("Count");
-        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, -1, -1));
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel13.setText("####");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, 90, -1));
+        jPanel4.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 380, 150, -1));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 1260, 440));
 
@@ -427,10 +459,6 @@ public final class mainframe extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("A Product By Tharindu Kalhara");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 620, 230, 30));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inf/payment gateway.jpg"))); // NOI18N
-        jLabel11.setText("jLabel11");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 640));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 640));
 
@@ -443,161 +471,170 @@ public final class mainframe extends javax.swing.JFrame {
     }//GEN-LAST:event_ageboxActionPerformed
 
     private void insertbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertbtnActionPerformed
-    String name = namebox.getText();
-    String add = adbox.getText();
-    String tel = telbox.getText();
-    String grade = gradebox.getSelectedItem().toString();
-    String age = agebox.getText();
-    
-    if(name.isEmpty() || add.isEmpty() || tel.isEmpty() || age.isEmpty() || grade.isEmpty()){
-        JOptionPane.showMessageDialog(null, "please enter data for all feilds.");
-    }else{
-        insert();
-    }
-     
-     
+        String name = namebox.getText();
+        String add = adbox.getText();
+        String tel = telbox.getText();
+        String grade = gradebox.getSelectedItem().toString();
+        String age = agebox.getText();
+
+        if (name.isEmpty() || add.isEmpty() || tel.isEmpty() || age.isEmpty() || grade.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "please enter data for all feilds.");
+        } else {
+            insert();
+        }
+
+
     }//GEN-LAST:event_insertbtnActionPerformed
 
-    public void insert(){
-      int age;
-      int grd;
-      String name;
-      String ad;
-      String tel;
-      
-      name = namebox.getText();
-      grd = Integer.parseInt((String) gradebox.getSelectedItem());
-      age = Integer.parseInt(agebox.getText());
-      ad= adbox.getText();
-      tel = telbox.getText();
-      
-      String image = photoad.getText();
-      image = image.replace("\\", "\\\\");
-      
-          try {
-            String sql = "INSERT INTO student(name,age,grade,address,telno,photo) VALUES('"+name+"','"+age+"','"+grd+"','"+ad+"','"+tel+"', '"+image+"' )";
+    public void insert() {
+        int age;
+        int grd;
+        String name;
+        String ad;
+        String tel;
+
+        name = namebox.getText();
+        grd = Integer.parseInt((String) gradebox.getSelectedItem());
+        age = Integer.parseInt(agebox.getText());
+        ad = adbox.getText();
+        tel = telbox.getText();
+
+        String image = photoad.getText();
+        image = image.replace("\\", "\\\\");
+
+        try {
+            String sql = "INSERT INTO student(name,age,grade,address,telno,photo) VALUES('" + name + "','" + age + "','" + grd + "','" + ad + "','" + tel + "', '" + image + "' )";
             pst = conn.prepareStatement(sql);
             pst.execute();
             JOptionPane.showMessageDialog(null, "Data inserted");
             tableload();
+            clr();
         } catch (Exception e) {
-           JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, e);
         }
-          
-        count();      
-       
+
+        count();
+
     }
-    
-    
+
+
     private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
-      tabledata();
+        tabledata();
     }//GEN-LAST:event_tableMouseClicked
 
     private void tableKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tableKeyReleased
-      tabledata();
+        tabledata();
     }//GEN-LAST:event_tableKeyReleased
 
     private void srchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_srchKeyReleased
-      search();
+        search();
     }//GEN-LAST:event_srchKeyReleased
 
     private void updatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatebtnActionPerformed
-      update();
-      tableload();
-      clr();
+        String name = namebox.getText();
+        String add = adbox.getText();
+        String tel = telbox.getText();
+        String grade = gradebox.getSelectedItem().toString();
+        String age = agebox.getText();
         
-        
+        if (name.isEmpty() || add.isEmpty() || tel.isEmpty() || age.isEmpty() || grade.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "please enter data for all feilds.");
+        } else {
+            update();
+            tableload();
+            clr();
+        }
+
+
     }//GEN-LAST:event_updatebtnActionPerformed
 
     private void delbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delbtnActionPerformed
-    
+
         int id;
+        String idForNullCheck = idbox.getText();
         id = Integer.parseInt(idbox.getText());
-    String name = namebox.getText();
-    String add = adbox.getText();
-    String tel = telbox.getText();
-    String grade = gradebox.getSelectedItem().toString();
-    String age = agebox.getText();
-    
-    if(name.isEmpty() || add.isEmpty() || tel.isEmpty() || age.isEmpty() || grade.isEmpty()){
-        JOptionPane.showMessageDialog(null, "please enter data for all feilds.");
-    }else{
-       
-    
-        
-     int check = JOptionPane.showConfirmDialog(null, "Do you sure to want to delete ? Triple attendance student and payment data will be deleted");
-     
-     if(check == 0){
-         try {
-            //int id;
-             id = Integer.parseInt(idbox.getText());
-          
-            String sql = "DELETE FROM student WHERE id = '"+id+"' "; 
-            pst = conn.prepareStatement(sql);
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "record deleted.");
-         } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Unable to delete record.");
-         }
-         
-         try {
-              String sql2 = "DELETE FROM attendance WHERE id = '"+id+"' ";
-              pst = conn.prepareStatement(sql2);
-              pst.execute();
-             // JOptionPane.showMessageDialog(null, "record deleted from Attendance.");  
-         } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Failed");  
-         }
-         
-          try {
-              String sql3 = "DELETE FROM feedata WHERE id = '"+id+"' ";
-              pst = conn.prepareStatement(sql3);
-              pst.execute();
-             // JOptionPane.showMessageDialog(null, "record deleted from Attendance.");  
-         } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Failed");  
-         }
-         
-     }
-         
-     }
-    tableload();
-    clr();
+        String name = namebox.getText();
+        String add = adbox.getText();
+        String tel = telbox.getText();
+        String grade = gradebox.getSelectedItem().toString();
+        String age = agebox.getText();
+
+        if (name.isEmpty() || add.isEmpty() || tel.isEmpty() || age.isEmpty() || grade.isEmpty() || idForNullCheck.equals("####")) {
+            JOptionPane.showMessageDialog(null, "please enter data for all feilds.");
+        } else {
+
+            int check = JOptionPane.showConfirmDialog(null, "Do you sure to want to delete ? Triple attendance student and payment data will be deleted");
+
+            if (check == 0) {
+                try {
+                    //int id;
+                    id = Integer.parseInt(idbox.getText());
+
+                    String sql = "DELETE FROM student WHERE id = '" + id + "' ";
+                    pst = conn.prepareStatement(sql);
+                    pst.execute();
+                    JOptionPane.showMessageDialog(null, "record deleted.");
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Unable to delete record.");
+                }
+
+                try {
+                    String sql2 = "DELETE FROM attendance WHERE id = '" + id + "' ";
+                    pst = conn.prepareStatement(sql2);
+                    pst.execute();
+                    // JOptionPane.showMessageDialog(null, "record deleted from Attendance.");  
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Failed");
+                }
+
+                try {
+                    String sql3 = "DELETE FROM feedata WHERE id = '" + id + "' ";
+                    pst = conn.prepareStatement(sql3);
+                    pst.execute();
+                    // JOptionPane.showMessageDialog(null, "record deleted from Attendance.");  
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Failed");
+                }
+
+            }
+
+        }
+        tableload();
+        clr();
     }//GEN-LAST:event_delbtnActionPerformed
 
     private void clrbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clrbtnActionPerformed
-      clr();
-     
+        clr();
+
     }//GEN-LAST:event_clrbtnActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-      System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void atchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atchActionPerformed
-     
-        
+
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         File f = chooser.getSelectedFile();
         String filename = f.getAbsolutePath();
         photoad.setText(filename);
-        
+
         Image getAbsolutePath = null;
-       /* ImageIcon icon = new ImageIcon(filename);
+        /* ImageIcon icon = new ImageIcon(filename);
         Image image = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(),Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(image);
         photo.setIcon(scaledIcon);*/
-       
+
         ImageIcon icon = new ImageIcon(filename);
-        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(),Image.SCALE_SMOOTH);
+        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         photo.setIcon(scaledIcon);
-        
+
     }//GEN-LAST:event_atchActionPerformed
 
     private void ageboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ageboxKeyReleased
-            
+
     }//GEN-LAST:event_ageboxKeyReleased
 
     private void telboxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telboxKeyReleased
@@ -605,23 +642,23 @@ public final class mainframe extends javax.swing.JFrame {
     }//GEN-LAST:event_telboxKeyReleased
 
     private void telboxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telboxKeyPressed
-     String tel = telbox.getText();
-     if(tel.length()>9){
-         telbox.setText("");
-     }
+        String tel = telbox.getText();
+        if (tel.length() > 9) {
+            telbox.setText("");
+        }
     }//GEN-LAST:event_telboxKeyPressed
 
     private void ageboxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ageboxKeyPressed
-       String age = agebox.getText();
-        if(age.length() >1){
+        String age = agebox.getText();
+        if (age.length() > 1) {
             agebox.setText("");
         }
     }//GEN-LAST:event_ageboxKeyPressed
 
     private void atdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atdActionPerformed
-      att at = new att();
-      at.setVisible(true);
-      this.dispose();
+        att at = new att();
+        at.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_atdActionPerformed
 
     private void idcardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idcardActionPerformed
@@ -630,9 +667,9 @@ public final class mainframe extends javax.swing.JFrame {
         String sname = namebox.getText();
         String sgrade = gradebox.getSelectedItem().toString();
         String sphoto = photoad.getText();
-        if(sid.isEmpty() || sid.equals("0000")){
+        if (sid.isEmpty() || sid.equals("0000")) {
             JOptionPane.showMessageDialog(null, "Select a row first");
-        }else{
+        } else {
             try {
                 String sql = "DELETE FROM idcard";
                 pst = conn.prepareStatement(sql);
@@ -641,7 +678,7 @@ public final class mainframe extends javax.swing.JFrame {
             }
 
             try {
-                String sql = "INSERT INTO idcard(id,name,grade,photoaddress) VALUES('"+sid+"', '"+sname+"', '"+sgrade+"','"+sphoto+"')";
+                String sql = "INSERT INTO idcard(id,name,grade,photoaddress) VALUES('" + sid + "', '" + sname + "', '" + sgrade + "','" + sphoto + "')";
                 pst = conn.prepareStatement(sql);
                 pst.execute();
             } catch (Exception e) {
@@ -667,25 +704,24 @@ public final class mainframe extends javax.swing.JFrame {
     }//GEN-LAST:event_srchcomboActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       MessageFormat header = new MessageFormat("Student Details/Filter Results");
-        
+        MessageFormat header = new MessageFormat("Student Details/Filter Results");
+
         try {
-          table.print(JTable.PrintMode.NORMAL, header,null);
+            table.print(JTable.PrintMode.NORMAL, header, null);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-     try{
-         Runtime.getRuntime().exec("rundll32 url.dll, FileProtocolHandler " + "userguide.pdf");
-     }catch(Exception e){
-          JOptionPane.showMessageDialog(null, e);
-     }
+        try {
+            Runtime.getRuntime().exec("rundll32 url.dll, FileProtocolHandler " + "userguide.pdf");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    
-    public void clr(){
+    public void clr() {
         namebox.setText("");
         agebox.setText("");
         idbox.setText("####");
@@ -696,18 +732,16 @@ public final class mainframe extends javax.swing.JFrame {
         srch.setText("");
         photoad.setText("propic.png");
         srchcombo.setSelectedIndex(0);
-        
+
         ImageIcon icon = new ImageIcon("propic.png");
-        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(),Image.SCALE_SMOOTH);
+        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         photo.setIcon(scaledIcon);
-        
-        tableload();  
-   }
-    
-    
-    
-    public void update(){
+
+        tableload();
+    }
+
+    public void update() {
         String id = idbox.getText();
         String name = namebox.getText();
         int age = Integer.parseInt(agebox.getText());
@@ -715,111 +749,107 @@ public final class mainframe extends javax.swing.JFrame {
         int grade = Integer.parseInt(gradebox.getSelectedItem().toString());
         String address = adbox.getText();
         String pa = photoad.getText();
-        
+
         try {
-            String sql = "UPDATE student SET name = '"+name+"', age = '"+age+"', grade='"+grade+"', telno= '"+tel+"', address = '"+address+"', photo = '"+pa+"' WHERE id= '"+id+"' ";
-            pst=conn.prepareStatement(sql);
+            String sql = "UPDATE student SET name = '" + name + "', age = '" + age + "', grade='" + grade + "', telno= '" + tel + "', address = '" + address + "', photo = '" + pa + "' WHERE id= '" + id + "' ";
+            pst = conn.prepareStatement(sql);
             pst.execute();
-            JOptionPane.showMessageDialog(null,"Updated");
+            JOptionPane.showMessageDialog(null, "Updated");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Failed to update");
+            JOptionPane.showMessageDialog(null, "Failed to update");
         }
     }
-    
-   
-    
-    public void search(){
+
+    public void search() {
         int val = srchcombo.getSelectedIndex();
         String srchv = srch.getText();
-        if(srchv.equals("")){
+        if (srchv.equals("")) {
             tableload();
-        }else{
+        } else {
 
-         if(val == 0){
-              try {
-            String sql = "SELECT * FROM student WHERE name LIKE '%"+srchv+"%' OR id LIKE '%"+srchv+"%' ";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            table.setModel(DbUtils.resultSetToTableModel(rs));
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+            if (val == 0) {
+                try {
+                    String sql = "SELECT * FROM student WHERE name LIKE '%" + srchv + "%' OR id LIKE '%" + srchv + "%' ";
+                    pst = conn.prepareStatement(sql);
+                    rs = pst.executeQuery();
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            } else if (val == 1) {
+                try {
+                    String sql = "SELECT * FROM student WHERE id LIKE '%" + srchv + "%' ";
+                    pst = conn.prepareStatement(sql);
+                    rs = pst.executeQuery();
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            } else if (val == 2) {
+                try {
+                    String sql = "SELECT * FROM student WHERE name LIKE '%" + srchv + "%' ";
+                    pst = conn.prepareStatement(sql);
+                    rs = pst.executeQuery();
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            } else if (val == 3) {
+                try {
+                    String sql = "SELECT * FROM student WHERE grade = '" + srchv + "' ";
+                    pst = conn.prepareStatement(sql);
+                    rs = pst.executeQuery();
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            } else if (val == 4) {
+                try {
+                    String sql = "SELECT * FROM student WHERE age = '" + srchv + "' ";
+                    pst = conn.prepareStatement(sql);
+                    rs = pst.executeQuery();
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            } else if (val == 5) {
+                try {
+                    String sql = "SELECT * FROM student WHERE telno LIKE '%" + srchv + "%' ";
+                    pst = conn.prepareStatement(sql);
+                    rs = pst.executeQuery();
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+
         }
-        }else if(val == 1){
-               try {
-            String sql = "SELECT * FROM student WHERE id LIKE '%"+srchv+"%' ";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            table.setModel(DbUtils.resultSetToTableModel(rs));
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        } else if(val == 2){
-               try {
-            String sql = "SELECT * FROM student WHERE name LIKE '%"+srchv+"%' ";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            table.setModel(DbUtils.resultSetToTableModel(rs));
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        } else if(val == 3){
-               try {
-            String sql = "SELECT * FROM student WHERE grade = '"+srchv+"' ";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            table.setModel(DbUtils.resultSetToTableModel(rs));
-         
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        } else if(val == 4){
-               try {
-            String sql = "SELECT * FROM student WHERE age = '"+srchv+"' ";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            table.setModel(DbUtils.resultSetToTableModel(rs));
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        }
-        else if(val == 5){
-               try {
-            String sql = "SELECT * FROM student WHERE telno LIKE '%"+srchv+"%' ";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            table.setModel(DbUtils.resultSetToTableModel(rs));
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        }
-        
+        count();
     }
-          count();
-    }
-    
-    
-    private void tableload(){
+
+    private void tableload() {
         String sql = "SELECT * FROM student";
-        
+
         try {
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             table.setModel(DbUtils.resultSetToTableModel(rs));
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,e);
+            JOptionPane.showMessageDialog(null, e);
         }
-          count();
+        count();
     }
-    
-    public void tabledata(){
+
+    public void tabledata() {
         photo.setVisible(true);
         int r = table.getSelectedRow();
-        
+
         String id = table.getValueAt(r, 0).toString();
         String name = table.getValueAt(r, 1).toString();
         String age = table.getValueAt(r, 2).toString();
@@ -827,7 +857,7 @@ public final class mainframe extends javax.swing.JFrame {
         String address = table.getValueAt(r, 4).toString();
         String telno = table.getValueAt(r, 5).toString();
         String paddress = table.getValueAt(r, 6).toString();
-        
+
         namebox.setText(name);
         agebox.setText(age);
         gradebox.setSelectedItem(grade);
@@ -835,22 +865,21 @@ public final class mainframe extends javax.swing.JFrame {
         adbox.setText(address);
         idbox.setText(id);
         photoad.setText(paddress);
-        
+
         ImageIcon icon = new ImageIcon(paddress);
-        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(),Image.SCALE_SMOOTH);
+        Image imgScale = icon.getImage().getScaledInstance(photo.getWidth(), photo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         photo.setIcon(scaledIcon);
-        
-        
-          count();
+
+        count();
     }
-    
-    public void count(){
+
+    public void count() {
         int x = table.getRowCount();
         String y = Integer.toString(x);
         jLabel13.setText(y);
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -903,8 +932,6 @@ public final class mainframe extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;

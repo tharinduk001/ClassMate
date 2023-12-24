@@ -77,16 +77,10 @@ public class feeframe extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         feetable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         temp = new javax.swing.JTable();
-        idbox = new javax.swing.JTextField();
-        monthchooser = new javax.swing.JComboBox<>();
-        t = new javax.swing.JLabel();
-        d = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         alldata = new javax.swing.JTable();
-        exportbtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -99,15 +93,22 @@ public class feeframe extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         paidst = new javax.swing.JCheckBox();
-        jLabel6 = new javax.swing.JLabel();
+        idbox = new javax.swing.JTextField();
+        exportbtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        d = new javax.swing.JLabel();
+        monthchooser = new javax.swing.JComboBox<>();
+        t = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Paymanet Portal Window");
         setBackground(new java.awt.Color(204, 153, 255));
         setForeground(new java.awt.Color(150, 192, 106));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        feetable1.setBackground(new java.awt.Color(255, 204, 204));
+        feetable1.setBackground(new java.awt.Color(70, 70, 68));
+        feetable1.setForeground(new java.awt.Color(255, 255, 255));
         feetable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -128,16 +129,6 @@ public class feeframe extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 26, 410, 440));
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 0));
-        jButton1.setForeground(new java.awt.Color(0, 0, 255));
-        jButton1.setText("Back to main menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, -1, -1));
-
         temp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -153,22 +144,8 @@ public class feeframe extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 442, 30, 20));
 
-        idbox.setBackground(new java.awt.Color(153, 153, 255));
-        getContentPane().add(idbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 130, 30));
-
-        monthchooser.setBackground(new java.awt.Color(0, 0, 255));
-        monthchooser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Decemeber" }));
-        getContentPane().add(monthchooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 130, 30));
-
-        t.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        t.setText("jLabel4");
-        getContentPane().add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 70, -1));
-
-        d.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        d.setText("jLabel5");
-        getContentPane().add(d, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 70, -1));
-
-        alldata.setBackground(new java.awt.Color(204, 255, 204));
+        alldata.setBackground(new java.awt.Color(70, 70, 68));
+        alldata.setForeground(new java.awt.Color(255, 255, 255));
         alldata.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -184,43 +161,35 @@ public class feeframe extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, 410, 350));
 
-        exportbtn.setBackground(new java.awt.Color(255, 153, 153));
-        exportbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        exportbtn.setText("Save and Export Past Month Details");
-        exportbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exportbtnActionPerformed(evt);
-            }
-        });
-        getContentPane().add(exportbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 270, 30));
-
-        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(22, 33, 41));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("AR CENA", 3, 40)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 0, 153));
-        jLabel3.setText("PAYMENT PORTAL");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 26)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("PAYMENT PORTAL...");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 300, 40));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("This month report");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, -1, 30));
 
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 300, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enter ID :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, 30));
 
-        v.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        v.setForeground(new java.awt.Color(255, 51, 0));
+        v.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        v.setForeground(new java.awt.Color(255, 255, 255));
         v.setText("Search by Month :");
-        jPanel1.add(v, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 430, -1, 30));
+        jPanel1.add(v, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 430, -1, 30));
 
-        mnt.setBackground(new java.awt.Color(255, 153, 0));
+        mnt.setBackground(new java.awt.Color(107, 106, 88));
+        mnt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        mnt.setForeground(new java.awt.Color(255, 255, 255));
         mnt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "*", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Decemeber" }));
         mnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,48 +198,95 @@ public class feeframe extends javax.swing.JFrame {
         });
         jPanel1.add(mnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 430, 120, 30));
 
-        jButton3.setBackground(new java.awt.Color(255, 51, 51));
-        jButton3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 12)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(255, 64, 64));
+        jButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Delete All Records(Use adter a year)");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 390, 290, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 390, 290, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Enter Month : ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("All the reports");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(204, 255, 102));
-        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 120, 137));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Mark");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 160, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 130, -1));
 
-        paidst.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        paidst.setForeground(new java.awt.Color(255, 0, 0));
+        paidst.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        paidst.setForeground(new java.awt.Color(255, 255, 255));
         paidst.setText("PAID");
         paidst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 paidstActionPerformed(evt);
             }
         });
-        jPanel1.add(paidst, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
+        jPanel1.add(paidst, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inf/payment gateway.jpg"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 470));
+        idbox.setBackground(new java.awt.Color(107, 106, 88));
+        idbox.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        idbox.setForeground(new java.awt.Color(255, 255, 255));
+        idbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idboxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(idbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 130, 30));
+
+        exportbtn.setBackground(new java.awt.Color(14, 187, 15));
+        exportbtn.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        exportbtn.setForeground(new java.awt.Color(255, 255, 255));
+        exportbtn.setText("Save and Export Month");
+        exportbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exportbtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(exportbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 270, 30));
+
+        jButton1.setBackground(new java.awt.Color(255, 64, 64));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Back to main menu");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 270, 30));
+
+        d.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        d.setForeground(new java.awt.Color(255, 255, 255));
+        d.setText("jLabel5");
+        jPanel1.add(d, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 130, -1));
+
+        monthchooser.setBackground(new java.awt.Color(107, 106, 88));
+        monthchooser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        monthchooser.setForeground(new java.awt.Color(255, 255, 255));
+        monthchooser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Decemeber" }));
+        jPanel1.add(monthchooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 130, 30));
+
+        t.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        t.setForeground(new java.awt.Color(255, 255, 255));
+        t.setText("jLabel4");
+        jPanel1.add(t, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 110, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 470));
 
@@ -461,6 +477,10 @@ public class feeframe extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_paidstActionPerformed
 
+    private void idboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idboxActionPerformed
+
     public void clr(){
         idbox.setText("");
         paidst.setSelected(false);
@@ -608,7 +628,6 @@ public class feeframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

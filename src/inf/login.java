@@ -40,6 +40,7 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
@@ -96,7 +97,7 @@ public class login extends javax.swing.JFrame {
       username = unamebox.getText();
       password = pwdbox.getText();
       
-      if(username.equals("YAHA@2023") && password.equals("1234")){
+      if(username.equals("CLASSMATE") && password.equals("1234")){
           mainframe mf = new mainframe();
           mf.setVisible(true);
           this.dispose();

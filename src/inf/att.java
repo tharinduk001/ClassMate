@@ -56,8 +56,6 @@ public class att extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         Datelabel = new javax.swing.JLabel();
         Timelabel = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -72,55 +70,53 @@ public class att extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         testtable = new javax.swing.JTable();
         testbtn = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Attendance Marking Window");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(22, 33, 41));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 44)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Attendance Marking");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
+        jLabel1.setText("Attendance Marking...");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 280, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("Date");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel3.setText("Time");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
-        Datelabel.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        Datelabel.setForeground(new java.awt.Color(255, 102, 0));
+        Datelabel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Datelabel.setForeground(new java.awt.Color(255, 255, 255));
         Datelabel.setText("jLabel4");
-        jPanel1.add(Datelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+        jPanel1.add(Datelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 130, -1));
 
-        Timelabel.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        Timelabel.setForeground(new java.awt.Color(255, 102, 0));
+        Timelabel.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        Timelabel.setForeground(new java.awt.Color(255, 255, 255));
         Timelabel.setText("jLabel5");
-        jPanel1.add(Timelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 80, -1));
+        jPanel1.add(Timelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 120, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 51));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("State :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
-        jPanel1.add(idin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 70, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, 30));
 
+        idin.setBackground(new java.awt.Color(107, 106, 88));
+        idin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        idin.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(idin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 70, 30));
+
+        stateb.setBackground(new java.awt.Color(107, 106, 88));
+        stateb.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        stateb.setForeground(new java.awt.Color(255, 255, 255));
         stateb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "0" }));
-        jPanel1.add(stateb, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 70, 30));
+        jPanel1.add(stateb, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 70, 30));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 51));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ID : ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, 30));
 
-        table2.setBackground(new java.awt.Color(51, 204, 255));
+        table2.setBackground(new java.awt.Color(70, 70, 68));
+        table2.setForeground(new java.awt.Color(255, 255, 255));
         table2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -144,40 +140,48 @@ public class att extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(table2);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 80, 560, 420));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 560, 450));
 
-        updatebtn.setBackground(new java.awt.Color(255, 255, 102));
-        updatebtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        updatebtn.setForeground(new java.awt.Color(204, 51, 0));
+        updatebtn.setBackground(new java.awt.Color(14, 187, 15));
+        updatebtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        updatebtn.setForeground(new java.awt.Color(255, 255, 255));
         updatebtn.setText("Update");
+        updatebtn.setMaximumSize(new java.awt.Dimension(72, 27));
+        updatebtn.setMinimumSize(new java.awt.Dimension(72, 27));
+        updatebtn.setPreferredSize(new java.awt.Dimension(89, 26));
         updatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updatebtnActionPerformed(evt);
             }
         });
-        jPanel1.add(updatebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, -1, -1));
+        jPanel1.add(updatebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 160, 40));
 
-        delbtn.setBackground(new java.awt.Color(255, 255, 102));
-        delbtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        delbtn.setForeground(new java.awt.Color(204, 51, 0));
+        delbtn.setBackground(new java.awt.Color(14, 187, 15));
+        delbtn.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        delbtn.setForeground(new java.awt.Color(255, 255, 255));
         delbtn.setText("Delete");
+        delbtn.setMaximumSize(new java.awt.Dimension(72, 27));
+        delbtn.setMinimumSize(new java.awt.Dimension(72, 27));
         delbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 delbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(delbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
+        jPanel1.add(delbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 160, 40));
 
-        jButton2.setBackground(new java.awt.Color(51, 255, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 51, 0));
-        jButton2.setText("Registration Window");
+        jButton2.setBackground(new java.awt.Color(255, 64, 64));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Main Window");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 160, 40));
+
+        jScrollPane2.setEnabled(false);
+        jScrollPane2.setFocusable(false);
 
         testtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -192,21 +196,18 @@ public class att extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(testtable);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 20, 10));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 0));
 
-        testbtn.setBackground(new java.awt.Color(255, 255, 102));
-        testbtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        testbtn.setForeground(new java.awt.Color(204, 51, 0));
+        testbtn.setBackground(new java.awt.Color(0, 120, 137));
+        testbtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        testbtn.setForeground(new java.awt.Color(255, 255, 255));
         testbtn.setText("Mark");
         testbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 testbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(testbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inf/mainwindow.jpg"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-400, -220, 1290, 760));
+        jPanel1.add(testbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 160, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
@@ -454,11 +455,8 @@ public class att extends javax.swing.JFrame {
     private javax.swing.JTextField idin;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
